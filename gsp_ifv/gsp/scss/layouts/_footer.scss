@@ -1,0 +1,53 @@
+/* ===========================
+	FOOTER STYLE
+=========================== */
+.footer {
+	& > .container {
+		padding: 0 30px;
+	}
+	height: 482px;
+	background: url('../images/bg_footer.png') center center no-repeat, white;
+
+	padding-top: 60px;
+	&__content {
+		border: 1px solid $quiteBlue;
+		background: white;
+		line-height: 120%;
+		padding: 26px;
+	}
+	&__confirm {
+		display: inline-block;
+		color: $quiteBlue;
+		font-size: 16px;
+		vertical-align: top;
+		&:before {
+			content: url('../images/icon_01.png');
+			@include move(relative,'tl',3px,0);
+			margin-right: 10px;
+		}
+	}
+	&__logo {
+		margin-top: 25px;
+	}
+	.btn {
+		display: inline-block;
+		margin-top: 10px;
+		padding: 15px 15px 0 15px;
+		font-size: 12px;
+		border: 2px solid transparent;
+		&:hover {	
+			border: 2px solid $blue;
+		}
+		&:nth-of-type(1) {
+			margin-left: 100px;
+		}
+	}
+	&__copy_right {
+		background: #10A3C0;
+		padding: 50px 0;
+		p {
+			color: white;
+			font-size: 16px;
+		}
+	}
+}

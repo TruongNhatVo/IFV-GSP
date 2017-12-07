@@ -1,0 +1,123 @@
+/*------------------- Contact page -------------------*/
+/*=============================
+	BREADCRUMBS BAR STYLE
+=============================*/ 
+.breadcrumbs_bar {
+	height: 120px;
+	background: url(../images/bg_breadcrumbss_bar.png);
+	margin-bottom: 80px;
+	@media (max-width: 780px) {
+		height: 61px;
+		margin-bottom: 35px;
+		.breadcrumbs_bar__title {
+			line-height: 61px;
+			font-size: 21px;
+		}
+	}
+	&__title {
+		font-size: 28px;line-height: 120px;
+		color: white;
+	}
+}
+
+/*=============================
+	CONTACT BAR STYLE
+=============================*/ 
+.contact {
+	&__infor,&__form {
+		width: 50%;
+		@media (max-width: 780px) {
+			& {
+				width: 100%;
+			}
+		}
+	}
+	&__infor {
+		line-height: 160%;
+		font-size: 16px;
+		color: #333333;
+		margin-bottom: 30px;
+	}
+	&__form {
+		overflow-x: hidden;
+		&_group {
+			margin-bottom: 35px;
+
+			&:nth-of-type(2) {
+				.contact__form_text {
+					width: 48%;
+					display: inline-block;
+					margin-top: 5px;
+				}
+			}
+			&:nth-of-type(7) {
+				.contact__form_text {
+					border-style: inset;
+    				height: 180px;
+				}
+			}
+		}
+		&_name {
+			@include clearFix();
+			margin-top: 10px;
+		}
+		&_text,&_option {
+			display: block;
+			width: 100%;
+			height: 37px;
+			padding: 5px;
+			color:#545454;
+			margin-top: 15px;
+		}
+		&_label {
+			font-size: 16px;
+			color: $blue;
+			margin-bottom: 15px;
+		}
+		&_require {
+			float: right;
+			display: block;
+			text-indent: 9999px;
+			width: 56px;
+			height: 23px;
+			z-index: 99;
+			background: url('../images/require_icon.png');
+		}
+		&_confirm {
+			color: $blue;
+			font-size: 16px;
+			margin-bottom: 20px;
+			& + span {
+				color: #4C4C4C;
+				margin: 0 20px 20px 0;
+			}
+		}
+		&_submit {
+			background:  #00A3D8;
+			border: 0;
+			color: white;
+			width: 300px;
+			height: 50px;
+			padding: 2px 0;
+			margin-top: 30px;
+			cursor: pointer;
+			position: relative;
+			&:after {
+				content: '>';
+				text-transform: uppercase;
+				font-size: 25px;
+				@include move(absolute,'tl',50%,20px);
+				transform: translateY(-50%);
+				color: white;
+			}
+			@media (max-width: 780px) {
+				width: 179px;
+				margin: 20px auto;
+				display: block;
+				&:after {
+					content: '';
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+/*------------------- Wrapper -------------------*/
+
+body {
+	overflow-x: hidden; 
+}
+
+.container {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.wauto {
+	width: auto;
+}
+
+.bd-none {
+	border: 0;
+}
+
+.fl {
+	& > * {float: left;}
+	&:after {
+		display: block;
+		content: '';
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
+	&-right {
+		float: right;
+	}
+	&-none {
+		float: none;
+	}
+}
+
+.rlt-pst {
+	position: relative;
+}
+
+.btn {
+	display: block;
+	background: $quiteBlue;
+	color: white;
+	font-size: 16px;
+	height: 42px;
+	padding:7px 0;
+	&-blue {
+		width: 180px;
+		height: 42px;
+	}
+	&:hover {
+		border: 2px solid $blue;
+		background: white;
+		color: $quiteBlue;
+	}
+}
+
+
+/*------------------- Components -------------------*/
+.title_h2 {
+    font-size: 24px;
+    color: $quiteBlue;
+    @media (max-width: 780px) {
+    	& {
+    		font-size: 18px;
+    	}
+    }
+}
+
+.title_section {  
+    color: $black;
+    font-size: 28px;
+    @media (max-width: 780px) {
+    	& {
+    		font-size: 16px;
+    	}
+    }
+}
+
+.inline-b {
+	display: inline-block;
+}
+
+.text {
+    font-size: 16px;
+    color: $black;
+    line-height: 160%;
+    @media (max-width: 780px) {
+    	& {
+    		font-size: 14px;
+    	}
+    }
+}
+
+.link {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: $blue;
+}
+
+/*---------------------Responsive ------------------------*/
+
+.is_pc {
+	display: inherit;
+}
+
+.is_sp {
+	display: none;
+}
+
+@media (max-width: 780px) {
+	.container {
+		padding: 0 15px;
+	}
+	.is_pc {
+		display: none;
+	}
+	.is_sp {
+		display: inherit;
+	}
+	p, span, li {
+		font-size: 14px;
+	}
+	.link {
+		font-size: 10px;
+	}
+}

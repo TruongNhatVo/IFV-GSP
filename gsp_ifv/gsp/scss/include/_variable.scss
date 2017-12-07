@@ -1,0 +1,43 @@
+$blue : #0059B2;
+$circleColor: #2DAEC8;
+$quiteBlue: #00A3D8;
+$quiteYellow: #F9F9F2;
+$footerBlue: #10A3C0;
+$border: #DDDDDD;
+$bgGrey: #EEEEEE;
+$black: #000;
+
+
+@mixin customWidth($children,$parent) {
+	width: round(percentage(($children) / ($parent)));
+}
+
+@mixin move($position,$direction,$positionTop, $positionLeft) {
+	position: $position;
+	@if $direction == 'tl' {
+		top: $positionTop;
+		left: $positionLeft;
+	}
+	@if $direction == 'tr' {
+		top: $positionTop;
+		right: $positionLeft;
+	}	
+	@if $direction == 'br' {
+		bottom: $positionTop;
+		right: $positionLeft;
+	}
+	@if $direction == 'bl' {
+		bottom: $positionTop;
+		left: $positionLeft;
+	}
+}
+
+
+@mixin clearFix() {
+	&:after {
+		clear: both;
+		display: block;
+		content: '';
+		visibility: hidden;
+	}
+}

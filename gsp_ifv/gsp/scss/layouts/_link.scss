@@ -1,0 +1,56 @@
+/*------------------- Link page -------------------*/
+/*=============================
+	LINKS BAR STYLE
+=============================*/ 
+.link {
+	&__title {
+		margin-bottom: 60px;
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+		}
+	}
+	&__image,&__infor {
+		width: 50%;
+		margin-bottom: 60px;
+		@media (max-width: 780px) {
+			& {
+				width: 100%;
+				border-bottom: 1px solid $border;
+				padding: 30px 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__image {
+		padding-left: 60px;
+		@media (max-width: 780px) {
+			& {
+				padding-left: 0;
+			}
+		}
+	}
+	&__infor {
+		margin-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+#link__footer {
+	.footer {
+		padding-top: 0;
+	}
+	.container {
+		border-top: 1px solid $quiteBlue;
+		padding: 0;
+	}
+	.footer__content {
+		border: 0;
+		background: transparent;
+		padding: 30px 0; 
+		margin: 0 13px;
+	}
+	.btn-blue {
+		display: block;
+		margin: 30px auto 0 auto;
+	}
+}

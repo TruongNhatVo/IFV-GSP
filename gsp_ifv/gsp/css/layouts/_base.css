@@ -1,0 +1,25 @@
+.container {
+  max-width: 10000px;
+  width: 100%;
+  margin: 0 auto; }
+
+.fl {
+  float: left; }
+  .fl:after {
+    display: block;
+    content: '';
+    clear: both; }
+  .fl-right {
+    float: right; }
+
+.w50 {
+  width: 50%; }
+
+.w25 {
+  width: 25%; }
+
+.w30 {
+  width: 30%; }
+
+.w70 {
+  width: 70%; }

@@ -1,0 +1,374 @@
+/* ===========================
+	RESPONSIVE STYLE
+=========================== */
+@media (max-width: 780px) {
+	/* ===========================
+		HEADER RESPONSIVE STYLE
+	=========================== */
+
+	.header {
+		.container {
+			position: relative;
+		}
+		&__logo {
+			padding: 10px 0;
+			margin-left: 0;
+			min-width: 160px;
+		}
+		&__btn {
+			z-index: 99;
+			width: 30px;
+			height: 20px;
+			cursor: pointer;
+			@include move(absolute,'tr',50%,20px);
+			transform: translateY(-50%);
+			transition: .5s ease-in-out;
+			&.active .header__btn_items:nth-of-type(1) {
+				transform: translateY(-50%) rotate(135deg);
+				top: 50%;
+			}
+			&.active .header__btn_items:nth-of-type(2) {
+				opacity: 0;
+ 				left: -60px;
+			}
+			&.active .header__btn_items:nth-of-type(3) {
+				top: 50%;
+				transform: translateY(-50%) rotate(-135deg);
+ 	
+			}
+			&_items {
+ 				display: block;
+   				position: absolute;
+   				height: 5px;
+   				width: 100%;
+   				background: #10A3C0;
+   				opacity: 1;
+ 				left: 0;
+ 				transition: all .25s ease-in-out;
+ 				&:nth-of-type(1) {
+ 					top: 0;
+ 				}
+ 				&:nth-of-type(2) {
+ 					top: 50%;
+ 					transform: translateY(-50%);
+ 				}
+ 				&:nth-of-type(3) {
+ 					bottom: 0;
+ 				}
+ 			}
+		}
+		&__lang {
+			&_switch {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				padding: 0 10px;
+				opacity: 0;
+			}
+			&_btn {
+				visibility: hidden;
+				opacity: 0;
+				width: 49%;
+				transition: all 0.45s ease-in-out;
+			}
+		}
+		&__nav {
+			width: 100%;
+			height: 100vh;
+			position: fixed;
+			z-index: 10;
+			background: white;
+			left: 0;	
+			top: 100%;
+			overflow: hidden;
+			opacity: 0.4;
+			transition: all 0.3s ease-out;
+			&_items {
+				display: block;
+				text-align: center;
+				margin-bottom: 15px;
+				opacity: 0.3;
+				transition: all .2s ease-out;
+				&:nth-of-type(1) {
+					margin-top: 20px;
+				}
+				@for $i from 1 through 6 {
+					&:nth-of-type(#{$i}) {
+						transition-delay: .2s * #{$i}; 
+					}
+				}
+			}
+			&.active {
+				top: 50px;
+				opacity: 1;
+				.header__lang {
+					&_switch {
+						opacity: 1;
+					}
+					&_btn {
+						opacity: 1;
+						visibility: initial;
+						transition-delay: 0.3s;
+						height: 40px;
+	    				padding: 15px;
+					}
+				}
+				.header__nav_items {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	/* ===========================
+		LOCAL01 RESPONSIVE STYLE
+	=========================== */
+	.local01 {
+		background-position: center 200px;
+		min-height: 380px;
+		&>.container {
+			background-position: center 150px;
+		}
+		&__title {
+			min-width: 260px;
+			max-width: 330px;
+			transform: translateX(-50%);
+			top: 45px;
+		}
+		&__btn {
+			bottom: 25px;
+		}
+	}
+	/* ===========================
+		PRESENT RESPONSIVE STYLE
+	=========================== */
+	.present {
+		padding-bottom: 0;
+		&__time {
+			position: relative;
+			padding: 40px 0;
+			text-align: left;
+			p {
+				margin-bottom: 20px;
+			}
+			ul {
+				display: initial
+			}
+			li {
+				display: initial;
+				margin-bottom: 10px;
+				span {
+					padding: 0 0 10px;
+					display: block;
+				}
+			}
+			a {
+				text-align: center;
+				@include move(absolute,'tr', 30px, 20px);
+			}
+		}
+	}
+	/* ===========================
+		ABOUT RESPONSIVE STYLE
+	=========================== */
+	.about {
+		&__infor {
+			padding-right: 0;
+			width: 100%;
+		}
+	}
+	/* ===========================
+		TECHNOLOGY RESPONSIVE STYLE
+	=========================== */
+	.technology {
+		&__wrap {
+			padding-top: 10px;
+			&>.container {
+				padding-bottom: 0;
+				position: relative;
+			}
+		}
+		&__title {
+			padding: 40px 0;
+		}
+		&__present {
+			padding: 0;
+		}
+		&__avartar {
+			position: relative;
+			width: 50%;
+			bottom: 0;
+			right: -50%;
+		}
+		&__present_btn {
+			display: inline-block;
+			@include move(absolute,'bl',100px,20px);
+			@media (max-width: 400px) {
+				& {
+					width: 120px;
+					font-size: 80%;
+					bottom: 50px;
+				}	
+			}
+		}
+	
+	}
+
+	/* ===========================
+		TECHNOLOGY2 RESPONSIVE STYLE
+	=========================== */
+	.technology2 {
+		&__list {
+			padding: 0 10px;
+		}
+		&__items {
+			padding: 0;
+		}
+		&__main {
+			width: 100%;
+			padding-left: 0;
+			&_title {
+				text-align: center;
+				padding-top: 20px;
+			}
+		}
+		&__present_btn {
+			margin: 20px auto 20px auto;
+			float: none;
+		}
+	}
+	/* ===========================
+		COMPANY RESPONSIVE STYLE
+	=========================== */
+	.company {
+		&> .container {
+			padding: 0;
+		}
+		h2 {
+			padding: 40px 0;
+		}
+		&__main {
+			&> * {
+				float: none;
+				width: 100%;
+			}
+			&__title {
+				padding: 15px 0;
+			}
+		}
+		&__infor {
+			padding-left: 20px;
+			line-height: 160%;
+			&> li {
+				&> span {
+					&:nth-child(1) {
+						width: 62px;
+					}
+				}
+			}
+		}
+		&__rule {
+			line-height: 160%;
+		}
+	}
+	/* ===========================
+		ACCESS RESPONSIVE STYLE
+	=========================== */
+	.access {
+		&> .container {
+			padding: 0 20px;
+		}
+		h2 {
+			padding: 42px 0;
+		}
+		&__infor {
+			&>* {
+				width: 100%;
+				float: none;
+			}
+		}
+		li {
+			font-size: 14px;
+		}
+	}
+	/* ===========================
+		FOOTER RESPONSIVE STYLE
+	=========================== */
+	.footer {
+		height: auto;
+		&>.container {
+			padding: 0;		}
+			&__content {
+				margin: 0 10px;
+			}
+		&__group {
+			margin-top: 100px;
+			background: white;
+			&:after {
+				display: block;
+				content: '';
+				clear: both;
+
+			}
+			&_btn {
+				width: 35%;
+				float: right;
+				padding-right: 10px
+			}
+		}
+		&__logo {
+			margin: 25px 0 25px;
+			padding: 0 5px 0 10px;
+			width: 60%;
+			float: left;
+		}
+		.btn {
+			width: 100%;
+			text-align: center;
+			background: $footerBlue;
+			vertical-align: top;
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+
+		}
+		&__copy_right {
+			padding: 15px 0;
+		}
+	}
+		.header__nav_main.tar {
+		padding-bottom: 90px;
+		}
+
+		.header__nav {
+		overflow-y: scroll;
+		}
+
+		.header__lang_switch {
+		background: #ffff
+		}
+}
+
+@media (max-width: 630px) {
+	.footer {
+		&__logo {
+			width: auto;
+		}
+		&__group {
+			&_btn {
+				width: 100%;
+				float: none;
+				padding: 0 10px;
+			}
+		}
+		.btn {
+			font-size: 10px;
+			width: 49%;
+			margin-bottom: 10px;
+			padding: 13px 0;
+		}
+		
+	}
+}

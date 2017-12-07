@@ -1,0 +1,11 @@
+.is_pc {
+  display: inherit; }
+
+.is_sp {
+  display: none; }
+
+@media (max-width: 780px) {
+  .is_pc {
+    display: none; }
+  .is_sp {
+    display: inherit; } }

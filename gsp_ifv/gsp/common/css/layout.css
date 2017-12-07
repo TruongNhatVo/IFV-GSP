@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+/* Clear Fix */
+
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+a.btn,
+a img{
+	transition: all .3s linear;
+}
+a.btn:hover,
+a:hover img{
+	opacity: .7;
+}
+
+/*
+----------------------------------------- Common */
+html {
+	font-size: 62.5%;
+}
+body {
+ 	font-family: Arial,'Helvetica Neue',Helvetica,Roboto,'Droid Sans','メイリオ',Meiryo,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','游ゴシック',sans-serif;
+	color: #000;
+	font-size: 1.6em;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: .08em;
+}
+
+	
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+.h1,h2,h3{
+	font-family: 'Noto Sans JP', 'Noto Sans Japanese', sans-serif;
+	font-weight: 500;
+}
+
+
+
+/*
+----------------------------------------- CSSfadein */
+body {
+    animation: fadeIn 1.2s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1.2s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+
+
+
+
+
